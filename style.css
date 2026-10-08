@@ -92,10 +92,6 @@ header .brand{
   padding:14%;
   background:#0d0d0d;
 }
-.tile:hover img, .tile:hover video{
-  transform:scale(1.035);
-  filter:brightness(0.55);
-}
 .tile-overlay{
   position:absolute; inset:0;
   display:flex; flex-direction:column; justify-content:flex-end;
@@ -103,7 +99,20 @@ header .brand{
   opacity:0; transition:opacity 0.35s ease;
   pointer-events:none;
 }
-.tile:hover .tile-overlay{opacity:1;}
+@media (hover:hover){
+  .tile:hover img, .tile:hover video{
+    transform:scale(1.035);
+    filter:brightness(0.55);
+  }
+  .tile:hover .tile-overlay{opacity:1;}
+}
+/* Touch screens have no hover: keep the caption visible over a soft gradient. */
+@media (hover:none){
+  .tile-overlay{
+    opacity:1;
+    background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0) 55%);
+  }
+}
 .tile-tc{
   font-family:var(--mono); font-size:11px; color:var(--accent);
   letter-spacing:0.05em; margin-bottom:4px;

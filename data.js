@@ -20,6 +20,10 @@ const bestWorks = [
 // ---- WORK PAGE ----
 // Hyrox drills down: city -> athlete -> clips.
 // Add a new city by copying a city block. Add a new athlete by copying an athlete block.
+// Videos: paste the Cloudinary link of the original upload (.mov/.mp4, any size).
+// The site builds the light 6-second previews, the posters and the full-screen
+// version from that link automatically. The athlete tile plays their FIRST clip.
+// cover (optional): full https:// image link used as the athlete tile's still frame.
 const workData = {
   hyrox: {
     cover: "resources/Hyrox_logo.png",
@@ -29,7 +33,6 @@ const workData = {
         date: "08.2026",
         athletes: {
           "Gioele Patroni | Pro Men": {
-            cover: "clips/Gioele Patroni/gioele.png",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1787310425/gioele00055332_cyaqon.mov", title:"Gioele Patroni", label:"Social Media-Ready Clip Sample", tc:"08.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1787310469/gioele00064311_dywmsn.mov", title:"Gioele Patroni", label:"Social Media-Ready Clip Sample", tc:"08.2026" },
@@ -37,7 +40,6 @@ const workData = {
             ]
           },
           "Merve | Open Single Women": {
-            cover: "clips/Merve/merve.png",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1787336726/merve00091182_sr9jqt.mov", title:"Merve", label:"Social Media-Ready Clip Sample", tc:"08.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1787336637/merve00102324_x8dyfw.mov", title:"Merve", label:"Social Media-Ready Clip Sample", tc:"08.2026" },
@@ -51,7 +53,6 @@ const workData = {
         date: "06.2026",
         athletes: {
           "Alyssa McElheny | Elite 15 Women": {
-            cover: "clips/Alyssa McElheny/alyssa.jpg",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785250132/Alyssa1_hsi7oh.mov", title:"Alyssa McElheny", label:"Social Media-Ready Clip Sample", tc:"06.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785250207/Alyssa4_tyefj0.mov", title:"Alyssa McElheny", label:"Social Media-Ready Clip Sample", tc:"06.2026" },
@@ -60,7 +61,6 @@ const workData = {
             ]
           },
           "Josh White | Pro Men": {
-            cover: "clips/Josh White/josh.jpg",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785252278/josh_qppclv.mov", title:"Josh White", label:"Cinematic Highlight Recap", tc:"06.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785252286/josh1_hbmawt.mov", title:"Josh White", label:"Social Media-Ready Clip Sample", tc:"06.2026" },
@@ -68,7 +68,6 @@ const workData = {
             ]
           },
           "Ana Esparza | Pro Women": {
-            cover: "clips/Ana/ana.jpg",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785249529/ana1_pspzxj.mov", title:"Ana Esparza", label:"Social Media-Ready Clip Sample", tc:"06.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785249654/ana2_iemhtc.mov", title:"Ana Esparza", label:"Social Media-Ready Clip Sample", tc:"06.2026" },
@@ -83,7 +82,6 @@ const workData = {
         date: "05.2026",
         athletes: {
           "Hugo Hugemarq | Pro Men x Elite Athlete": {
-            cover: "clips/Hugo/hugo.jpg",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785251520/hugo1_kakcs0.mov", title:"Hugo Hugemarq", label:"Social Media-Ready Clip Sample", tc:"05.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785251507/hugo2_c4d3uu.mov", title:"Hugo Hugemarq", label:"Social Media-Ready Clip Sample", tc:"05.2026" },
@@ -92,7 +90,6 @@ const workData = {
             ]
           },
           "Etta Bruzzi | Women Open": {
-            cover: "clips/Etta Bruzzi/etta.png",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785251183/EB2_ttncod.mov", title:"Etta Bruzzi", label:"Social Media-Ready Clip Sample", tc:"05.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785251184/EB3_qbbanl.mov", title:"Etta Bruzzi", label:"Social Media-Ready Clip Sample", tc:"05.2026" },
@@ -102,7 +99,6 @@ const workData = {
             ]
           },
           "Manuela & Simone | Double Mixed": {
-            cover: "clips/Manuela e Simone/manuela e simone.png",
             clips: [
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785252648/manuela_e_simone_xnyll3.mov", title:"Manuela & Simone", label:"Cinematic Highlight Recap", tc:"05.2026" },
               { type:"video", src:"https://res.cloudinary.com/dvam4kmk/video/upload/v1785252543/manuela_e_simone1_f7oqdj.mov", title:"Manuela & Simone", label:"Social Media-Ready Clip Sample", tc:"05.2026" },

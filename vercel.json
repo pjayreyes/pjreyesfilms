@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/work.html", "destination": "/", "permanent": true }
+  ]
+}
